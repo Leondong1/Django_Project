@@ -11,7 +11,8 @@ from . import views
 
 
 urlpatterns = [
-    # url(路径，视图)，
+    # url(路径，视图)，URL中为了规范操作，避免请求错误，结尾尽量 /$
     url(r'^index/$',views.index,name='index'),
+    url(r'^login/$',views.login,name='login'),
 
 ]

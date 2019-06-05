@@ -16,7 +16,15 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 
+
+import users.urls
+from users import views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^users/',include('users.urls',namespace='users'))
+    # 咱们尽量别这么使用，毕竟将来项目很多视图，会导致文件累赘
+    url(r'users/',views.index),
+    # url(r'^users/',include('users.urls',namespace='users'))
+    # 注意这里的两种方式均可以找到咱们的子路由
+    url(r'^users/',include(users.urls))
 ]

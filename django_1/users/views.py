@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.core.urlresolvers import reverse
 
@@ -12,3 +12,13 @@ def index(request):
     :return: 响应对象
     """
     return HttpResponse('hello world\r\nhello Leon')
+
+
+def login(request):
+    """
+    解析咱们的路由命名 与reverse反推在重定向里面的应用
+    :param request:
+    :return:
+    """
+    url = reverse('index')
+    return redirect(url)

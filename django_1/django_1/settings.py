@@ -14,7 +14,8 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print(BASE_DIR)
+# /Users/DZ/Desktop/Django/django_1 : 可以看得到确实是咱们项目的根路径
+# print(BASE_DIR)
 
 
 # Quick-start development settings - unsuitable for production
@@ -118,6 +119,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
+# 注意：静态文件的访问 咱需要在前面加上路由前缀 /static/
+# 后面写上咱们需要去访问的静态页面（浏览器会自动去咱们的静态文件夹去寻找）
+# 咱们的静态文件夹目录采用了一种方式对其进行连接
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
