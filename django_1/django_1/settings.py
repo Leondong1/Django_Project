@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users.apps.UsersConfig', # 注册安装应用
+    'users.apps.UsersConfig', # 注册安装子应用
+    'reqresp.apps.ReqrespConfig'
 ]
 
 MIDDLEWARE = [
