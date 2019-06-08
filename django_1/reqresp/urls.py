@@ -14,6 +14,13 @@ urlpatterns = [
     #  参数的名字以 <> 指明，两种方式：位置参数和关键字参数
     url(r'^weather/([a-z]+)/(\d+)/$',views.weather),
     url(r'^weather/(?P<city>[a-z]+)/(?P<year>\d+)/$',views.weather),
-    url(r'^response/$',views.response)
+    url(r'^qs/$',views.qs),
+    url(r'^getbody/$',views.get_body),
+    url(r'^getjson/$',views.get_body_json),
+    url(r'^getheaders/$',views.get_headers),
+    url(r'^response/$',views.response),
+    url(r'^demoview/$',views.demo_view),
+    url(r'^setcookie/$',views.set_cookie),
+    url(r'^getcookie/$',views.get_cookie)
 
 ]
