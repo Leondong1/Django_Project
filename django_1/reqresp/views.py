@@ -45,6 +45,7 @@ def get_headers(request):
     print(request.META['CONTENT_TYPE'])
     print(request.META['REQUEST_METHOD'])
     print(request.META['HTTP_ACCEPT'])
+    print(request.META['HTTP_NAME'])
     print(request.method)
     print(request.encoding)
     print(request.path)
@@ -65,7 +66,7 @@ def demo_view(request):
     # response.status_code =400
     # response['name'] = 'leon'
     # return response
-    return HttpResponseRedirect(content='helo,leon')
+    return HttpResponseRedirect('/setcookie/')
 
 # cookie 和 session 部分
 # 设置cookie 和 读取cookie
@@ -79,3 +80,18 @@ def get_cookie(request):
     cookie = request.COOKIES.get('name')
     print(cookie)
     return HttpResponse('ok')
+
+# 对session 数据的操作
+# 牢记，咱们的session 或者 cookie 是咱们 服务器 与浏览器方之间的一种默认方式
+# 与咱们使用哪种语言是没有关系的
+
+def set_session(request):
+    request.session['name'] = 'crystal'
+
+    return HttpResponse('ok')
+
+def set_session2(request):
+    session = request.session.get('name')
+    print(session)
+    return HttpResponse('ok')
+

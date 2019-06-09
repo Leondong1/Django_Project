@@ -16,6 +16,9 @@ class BookInfo(models.Model):
         verbose_name = '图书'  # 在admin站点中显示的名称
         verbose_name_plural = verbose_name  # 显示的复数名称
 
+    def __str__(self):
+        return self.btitle
+
 #定义英雄模型类HeroInfo
 class HeroInfo(models.Model):
     GENDER_CHOICES = (
@@ -26,9 +29,13 @@ class HeroInfo(models.Model):
     hgender = models.SmallIntegerField(choices=GENDER_CHOICES, default=0, verbose_name='性别')
     hcomment = models.CharField(max_length=200, null=True, verbose_name='描述信息')
     hbook = models.ForeignKey(BookInfo, on_delete=models.CASCADE, verbose_name='图书')  # 外键
+    # 外键实际上在我们的数据库中的存储形式是以 形如：hbook_id 得到
     is_delete = models.BooleanField(default=False, verbose_name='逻辑删除')
 
     class Meta:
         db_table = 'tb_heros'
         verbose_name = '英雄'
         verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.hname

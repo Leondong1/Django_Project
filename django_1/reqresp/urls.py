@@ -19,8 +19,11 @@ urlpatterns = [
     url(r'^getjson/$',views.get_body_json),
     url(r'^getheaders/$',views.get_headers),
     url(r'^response/$',views.response),
-    url(r'^demoview/$',views.demo_view),
+    url(r'^demoview/$', views.demo_view),
     url(r'^setcookie/$',views.set_cookie),
-    url(r'^getcookie/$',views.get_cookie)
+    url(r'^getcookie/$',views.get_cookie),
+    url(r'^setsession/$',views.set_session),
+    url(r'^setsession2/$',views.set_session)
+
 
 ]
