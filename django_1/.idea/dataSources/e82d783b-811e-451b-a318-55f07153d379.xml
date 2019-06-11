@@ -1642,57 +1642,62 @@ model</ColNames>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="384" parent="293" name="PRIMARY">
+    <column id="384" parent="293" name="logo">
+      <Position>7</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="385" parent="293" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="385" parent="294" name="id">
+    <column id="386" parent="294" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="386" parent="294" name="hname">
+    <column id="387" parent="294" name="hname">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="387" parent="294" name="hgender">
+    <column id="388" parent="294" name="hgender">
       <Position>3</Position>
       <DataType>smallint(6)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="388" parent="294" name="hcomment">
+    <column id="389" parent="294" name="hcomment">
       <Position>4</Position>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="389" parent="294" name="is_delete">
+    <column id="390" parent="294" name="is_delete">
       <Position>5</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="390" parent="294" name="hbook_id">
+    <column id="391" parent="294" name="hbook_id">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="391" parent="294" name="tb_heros_hbook_id_9e4a63db_fk_tb_books_id">
+    <index id="392" parent="294" name="tb_heros_hbook_id_9e4a63db_fk_tb_books_id">
       <ColNames>hbook_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="392" parent="294" name="PRIMARY">
+    <key id="393" parent="294" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="393" parent="294" name="tb_heros_hbook_id_9e4a63db_fk_tb_books_id">
+    <foreign-key id="394" parent="294" name="tb_heros_hbook_id_9e4a63db_fk_tb_books_id">
       <ColNames>hbook_id</ColNames>
       <RefSchemaName>django_demo</RefSchemaName>
       <RefTableName>tb_books</RefTableName>

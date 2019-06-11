@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users.apps.UsersConfig', # 注册安装子应用
+    'rest_framework',
+    'users.apps.UsersConfig', # 注册安装子应用 (相当于咱们flask里面注册蓝图)
     'reqresp.apps.ReqrespConfig',
     'classview.apps.ClassviewConfig',
     'booktest.apps.BooktestConfig'
@@ -134,6 +135,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static_files')
+
 ]
 
 
@@ -148,3 +150,5 @@ CACHES = {
 }
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
+
+MEDIA_ROOT=os.path.join(BASE_DIR,"static_files/media")

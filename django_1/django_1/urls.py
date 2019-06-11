@@ -28,5 +28,7 @@ urlpatterns = [
     # 注意这里的两种方式均可以找到咱们的子路由
     url(r'^users/',include(users.urls)),
     url(r'reqresp/',include('reqresp.urls')),
-    url(r'^classview/$',include('classview.urls'))
+    # 注意：这里的路径是不能够添加 $ 结尾的
+    url(r'^classview/',include('classview.urls')),
+    url(r'^booktest/',include('booktest.urls'))
 ]
