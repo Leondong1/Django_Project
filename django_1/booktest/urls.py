@@ -11,7 +11,11 @@ from . import views
 from rest_framework.routers import DefaultRouter
 
 urlpatterns = [
-    # url(r'^bookmanage/$',views.bookmanage)
+    # url(r'^bookmanage/$',views.bookmanage),
+    url(r'^booktest/$',views.IndexView.as_view()),
+    url(r'^books/$',views.BooksAPIView.as_view()),
+    url(r'^books/(?P<pk>\d+)/$',views.BookAPIView.as_view()),
+
 ]
 
 router = DefaultRouter()

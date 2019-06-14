@@ -24,6 +24,4 @@ urlpatterns = [
     url(r'^getcookie/$',views.get_cookie),
     url(r'^setsession/$',views.set_session),
     url(r'^setsession2/$',views.set_session)
-
-
 ]

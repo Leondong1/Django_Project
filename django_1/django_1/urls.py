@@ -30,5 +30,5 @@ urlpatterns = [
     url(r'reqresp/',include('reqresp.urls')),
     # 注意：这里的路径是不能够添加 $ 结尾的
     url(r'^classview/',include('classview.urls')),
-    url(r'^booktest/',include('booktest.urls'))
+    url(r'^',include('booktest.urls'))
 ]

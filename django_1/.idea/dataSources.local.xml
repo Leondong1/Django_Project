@@ -4,6 +4,7 @@
     <data-source name="db" uuid="d20c92f8-5cb3-49e0-9917-1f92a3b6ac67">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
       <auth-required>false</auth-required>
+      <introspection-schemas>*:</introspection-schemas>
     </data-source>
     <data-source name="django_demo@localhost" uuid="e82d783b-811e-451b-a318-55f07153d379">
       <database-info product="MySQL" version="8.0.15" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.47 ( Revision: fe1903b1ecb4a96a917f7ed3190d80c049b1de29 )" dbms="MYSQL" exact-version="8.0.15">
